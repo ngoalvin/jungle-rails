@@ -1,5 +1,20 @@
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
-<p class="font-weight-bold"> Amount of Products: <%= @product_count %> </p>
-<p class="font-weight-bold"> Amount of Categories: <%= @category_count %> </p>
+<p> Amount of Products: <%= @product_count %> 
+<%= link_to 'Products',  [:admin, :products] %>
+<p> Amount of Categories: <%= @category_count %> 
+ <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Categories
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <% Category.all.each do |category| %>
+              <li><%= link_to category.name, category %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+</p>
+
 
