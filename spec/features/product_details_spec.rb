@@ -21,9 +21,10 @@ RSpec.feature "ProductDetails", type: :feature, js:true do
 
     # commented out b/c it's for debugging only
     find('article.product a', match: :first).click
-    sleep(1)
-    save_and_open_screenshot
-    puts page.html
+    # sleep(1)
+    # save_and_open_screenshot
+    # puts page.html
 
+    expect(page).to have_css 'img.main-img', count: 1
   end
 end
