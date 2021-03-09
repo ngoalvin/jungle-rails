@@ -15,8 +15,6 @@ RSpec.describe Product, type: :model do
       @product.save!
       expect(@product).to be_valid
     end
-  end
-  describe 'Validations' do
     it "is invalid with no name" do 
       @category = Category.new(name: "Winter Clothes")
       @product = Product.new(
@@ -30,8 +28,6 @@ RSpec.describe Product, type: :model do
       @product.save
       expect(@product).to_not be_valid
     end
-  end
-  describe 'Validations' do
     it "is invalid with no category" do 
       @category = Category.new(name: "Winter Clothes")
       @product = Product.new(
@@ -45,8 +41,6 @@ RSpec.describe Product, type: :model do
       @product.save
       expect(@product).to_not be_valid
     end
-  end
-  describe 'Validations' do
     it "is invalid with no price" do 
       @category = Category.new(name: "Winter Clothes")
       @product = Product.new(
@@ -60,8 +54,6 @@ RSpec.describe Product, type: :model do
       @product.save
       expect(@product).to_not be_valid
     end
-  end
-  describe 'Validations' do
     it "is invalid with no quantity" do 
       @category = Category.new(name: "Winter Clothes")
       @product = Product.new(
